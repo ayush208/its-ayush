@@ -154,7 +154,7 @@ p{
 }
 
 .outer{
-    /* position: relative; */
+    position: relative; 
     margin-top: 200px;
     margin-left: 60px;
     font-family: 'Quantico', sans-serif;
