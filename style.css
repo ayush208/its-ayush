@@ -165,7 +165,7 @@ h3{
     color: ivory;
 }
 .inner{
-    /* position: absolute; */
+    position: absolute; 
     height: 50px;
     font-size: 45px;
     text-transform: uppercase;
