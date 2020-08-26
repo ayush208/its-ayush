@@ -175,7 +175,7 @@ h3{
 }
 .inner span{
     animation: anim 5s ease infinite;
-    /* position: relative; */
+    position: relative; 
     color: #e58e26
 }
 .outer h2{
