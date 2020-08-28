@@ -187,8 +187,8 @@ h3{
 
 @keyframes anim{
     0%{ top: 0 }
-    15%{ top: -100%  }
-    45%{ top: -210%;}
+    15%{ top: -130%  }
+    45%{ top: -260%;}
     60%{top: 0;}
     
 }
@@ -197,14 +197,6 @@ h3{
 
 /* lets start */
 @media screen and (max-width: 900px){
-    *{
-        
-    }
-    /* .hrr{
-        width: 200px;
-        
-        margin-top: 10px;
-    } */
     .nav-links{
         display: none;
     }
