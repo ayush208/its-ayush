@@ -61,6 +61,7 @@
     background:linear-gradient(to top, #008aff,#00ffe7);
     filter: blur(10px);
 }
+
 .nav{
     display: flex;
     justify-content: space-around;
@@ -71,9 +72,12 @@
     position: sticky;
     top: 0;
     color: sienna;
-    width: 100%;
+    width: 99%;
     position: fixed;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
 }
+
 
 
 
