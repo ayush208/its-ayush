@@ -128,14 +128,6 @@
     transition: .5s;
 }
 
-
-.hrr{
-    width:90%;
-    margin-top: 70px;
-    color: cornsilk;
-    /* position: sticky; */
-}
-
 p{
     color: seashell;
     padding-left: 4rem;
@@ -156,6 +148,7 @@ p{
 .home{
     font-size: xx-large;
     height: 2rem;
+    width:100vh;
 }
 
 .outer{
