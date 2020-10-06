@@ -1,237 +1,155 @@
-*{
-    background: #000;
-    color: white
-    ;
-}
-::-webkit-scrollbar{
-    width: 0;
-}
-
-#scroll-path{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 10px;
-    height: 100%;
-    background:rgba(225,225,225,0.05)
+    *,
+*::before,
+*::after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
-#progressbar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 10px;
-    background:linear-gradient(to top, #008aff,#00ffe7);
-    animation:animate 5s linear infinite;
+html{
+   /* font-family: 'Roboto', sans-serif; */
+   /* font-family: 'Quicksand', sans-serif; */
+   font-family: 'Acme', sans-serif;
+   font-size: 10px;
+}
+::selection{
+   color: white;
+   background-color: black;
+}
+header{
+   width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   transition: background-color .5s ease;
+   z-index: 1000;
 }
 
-@keyframes animate
-{
-    0%,100%
-    {
-        filter: hue-rotate(0deg);
-    }
-    50%{
-        filter: hue-rotate(360deg);
-    }
-    80%{
-        filter: hue-rotate(360deg);
-    }
-}
-#progressbar:before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:linear-gradient(to top, #008aff,#00ffe7);
-    filter: blur(10px);
-}
-
-#progressbar:after
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:linear-gradient(to top, #008aff,#00ffe7);
-    filter: blur(10px);
+.container{
+   width: 100%;
+   max-width: 120rem;
+   margin: 0 auto;
+   padding: 0 1.5rem;
 }
 
 .nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    letter-spacing: 2px;
-    height: 20px;
-    position: sticky;
-    top: 0;
-    color: sienna;
-    width: 99%;
-    position: fixed;
-    border-bottom: 2px solid #ffffff;
-    padding-bottom: 2px;
+   width: 100%;
+   height: 10rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 2px solid rgba(255,255,255,.05);
+   transition: height .5s ease;
 }
 
-
-
-
-.nav-links{
-    list-style-type:none;
-    display: flex;
-    justify-content: space-between;
-    width: 25rem;
-    font-size: 20px;
-    height:20px;
-    
+.nav a{
+   text-decoration: none;
+   color: #fff;
+   font-size: 1.6rem;
+   font-weight: bolder;
 }
 
-.nav-title{
-    color: white;
-    font-family: 'Quantico', sans-serif;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.nav .logo{
+   font-size: 3.5rem;
+   font-weight: bold;
+   font-family: 'Rubik', sans-serif;
+   color: white;
+   padding-left: 40px;
 }
 
-.nav-title :hover{
-    color: white;
+.nav-list{
+   list-style: none;
+   display: flex;
+   margin-right: auto;
+   margin-left: 45%;
 }
 
-.nav-links a{
-    color: rgb(146, 142, 142);
-    text-decoration: none;
-    /* background-color:white; */
-    font-family: 'Quantico', sans-serif;
-    letter-spacing: 2px;
+.nav-link{
+   margin: 0 2rem;
+   position: relative;
 }
 
-.nav-links :hover{
-    color: white;
-}
-/*  */
-.nav-links a::after{
-    content: "";
-    width:0%;
-    height: 3px;
-    display: block;
-    background-color: #fff;
-}
-
-.nav-links a:hover::after{
-    width: 100%;
-    transition: .5s;
+.nav-link::after{
+   content: '';
+   width: 100%;
+   height: 2px;
+   background-color: #fff;
+   position: absolute;
+   left: 0;
+   bottom: -3px;
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform .5s ease;
 }
 
-p{
-    color: seashell;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-top: 2rem;
-    letter-spacing: 4px;
-    font-family: 'Noto Sans SC', sans-serif;
+.nav-link:hover::after{
+   transform: scaleX(1);
 }
 
-
-::selection{
-    color: blue;
-    background-color: cornsilk;
-    
+#nav-cta:hover{
+   background-color: #d3d3d3;
 }
 
-/* asdfghjkl */
+.scrolling-active{
+   background-color: #fff;
+   box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+.scrolling-active .nav{
+   height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+   color: #313131;
+}
+
+.scrolling-active #nav-cta{
+   background-color: #313131;
+   color: #fff;
+}
+
+.scrolling-active #nav-cta:hover{
+   background-color: #151515;
+}
+
+.scrolling-active .nav-link::after{
+   background-color: #313131;
+}
+
 .home{
-    font-size: xx-large;
-    height: 2rem;
-    width:100vh;
+   width: 100%;
+   height: 100vh;
+   background: url("https://images.unsplash.com/photo-1581837565439-ff14b5fa55da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80") center no-repeat;
+   
+   background-size: cover;
+   position: relative;
+   color: white;
 }
 
-.outer{
-    position: relative; 
-    margin-top: 200px;
-    margin-left: 60px;
-    font-family: 'Quantico', sans-serif;
-    width: 60%;
-}
-h3{
-    font-size: 45px;
-    color: ivory;
-}
-.inner{
-    position: absolute; 
-    height: 50px;
-    font-size: 45px;
-    text-transform: uppercase;
-    display: inline-block;
-    overflow: hidden;
-    color: ivory;
-}
-.inner span{
-    animation: anim 5s ease infinite;
-    position: relative; 
-    color: #e58e26
-}
-.outer h2{
-    font-size: 20px;
-    width: 343px;
-
+.home::after{
+   content: '';
+   width: inherit;
+   height: inherit;
+   position: absolute;
+   top: 0;
+   left: 0;
+   
 }
 
-@keyframes anim{
-    0%{ top: 0 }
-    15%{ top: -130%  }
-    45%{ top: -260%;}
-    60%{top: 0;}
-    
+.about{
+   width: 100%;
+   height: 200vh;
+   background-color: #fff;
+}
+.home h3{
+   margin-top: 40vh;
+   margin-left: 5%;
+   font-size: 50px;
+   line-height: 50px;
+}
+.home h1{
+   font-size: 80px;
+   margin-left: 5%;
 }
 
-/* lets start */
 
-/* lets start */
-@media screen and (max-width: 900px){
-    .nav-links{
-        display: none;
-    }
-    .nav-title{
-        text-align: left;
-        justify-items: left;
-        font-size: 10px;
-        margin-left: 10px;
-    }
-    .nav{
-        width: 90%;
-        position: static;
-    }
-    .outer{
-        width: 34;
-        margin-top: 50px;
-    }
-    .outer h2{
-        width: 200px;
-        font-size: 10px;
-    }
-    .outer h3{
-        font-size: 20px;
-        width: 200px;
-    }
-    .outer .inner{
-        font-size: 20px;
-        position: static;
-    }
-    @keyframes anim{
-        0%{ top: 0 }
-        15%{ top: -30px }
-        45%{ top: -60px;}
-        60%{ top: 0}
-        
-    }
-    .inner {
-        width: 200px;
-        height: 20px;
-    }
-}
