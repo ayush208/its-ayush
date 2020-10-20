@@ -4,6 +4,8 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
 #loading{
 	position: fixed;
@@ -19,6 +21,7 @@ html{
    /* font-family: 'Quicksand', sans-serif; */
    font-family: 'Acme', sans-serif;
    font-size: 10px;
+   scroll-behavior: smooth;
 }
 ::selection{
    color: white;
@@ -210,6 +213,9 @@ header{
    color: #333;
    font-weight: 500;
 }
+.information-text{
+   width: 80%;
+}
 .information{
    padding-top: 90px;
    padding-left: 50px;
@@ -219,6 +225,10 @@ header{
    font-size: 30px;
    width: 50%;
 }
+.ico{
+   font-size: 50px;
+}
+
 .projects{
    width: 100vh;
    height: 100vh;
@@ -226,7 +236,7 @@ header{
 
 .contact-us{
    margin-top: 80px;
-   width: 30%;
+   width: 400px;
    height: 450px;
    background: #fff;
    padding: 50px;
@@ -623,6 +633,10 @@ header{
    .contact-us{
       width: 90%;
       margin: auto;
-
+   }
+   .gallery-items li{
+      width: 50%;
+      float: left;
+      padding: 0 1px 2px;
    }
 }
