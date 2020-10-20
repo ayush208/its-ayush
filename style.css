@@ -107,6 +107,9 @@ header{
 .scrolling-active .toggle-button .bar{
    background-color: black;
 }
+.scrolling-active .toggle-button .bara{
+   background-color: black;
+}
 .scrolling-active .nav{
    height: 6.6rem;
 }
@@ -478,8 +481,7 @@ header{
 	display: inline-block;
 	border:1px solid #dddddd;
 	border-radius: 30px;
-	padding: 4px;
-	margin:0 0 60px;
+   margin:0 0 60px;
 }
 #filter-list li{
 	display: inline-block;
@@ -573,7 +575,7 @@ header{
 }
 .project-header{
    font-size: 30px;
-   margin-left: 40%;
+   
 }
 .row{
    margin-left: 17%;
@@ -638,5 +640,34 @@ header{
       width: 50%;
       float: left;
       padding: 0 1px 2px;
+   }
+   .project-header{
+      margin-left: 15%;
+   }
+   
+
+   #filter-list{
+      
+      border:1px solid #dddddd;
+      border-radius: 30px;
+      margin:0 0 60px;
+   }
+   #filter-list li{
+      display: inline-block;
+      font-size: 16px;
+      color: #888888;
+      text-transform: uppercase;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 25px;
+      font-weight: 500;
+      padding: 0 20px;
+      min-width: 130px;
+      cursor: pointer;
+      -webkit-transition:all 0.3s ease-in-out;
+      -ms-transition:all 0.3s ease-in-out;
+      -moz-transition:all 0.3s ease-in-out;
+      transition:all 0.3s ease-in-out;
+   
    }
 }
